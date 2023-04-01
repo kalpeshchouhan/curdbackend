@@ -28,6 +28,7 @@ mongoose.connect(
 app.use(bodyparser.json());
 app.use(express.urlencoded({ extends: false }));
 app.use(cors());
+app.use(cors({ origin: "https://kalpeshcurdapp.vercel.app" }));
 app.use("/student", rout);
 
 app.listen(port, () => {
