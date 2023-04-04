@@ -23,7 +23,11 @@ mongoose.connect(
     log(e);
   }
 );
-
+app.use(
+  cors({
+    origin: "https://kalpeshcurdapp.vercel.app",
+  })
+);
 // middleware
 app.use(bodyparser.json());
 app.use(express.urlencoded({ extends: false }));
